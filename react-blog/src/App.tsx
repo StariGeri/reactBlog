@@ -1,16 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
 import "./App.css";
+//import components
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
-function App() {
+const App:React.FC = () => {
   return (
-    <div>
-      <section className = "heroSection">
+    <Router>
+      <div className="App">
         <Navbar />
-        <div className="curve"></div>
-      </section>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Login" element={<Login/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
 export default App;
