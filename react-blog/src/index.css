@@ -1,21 +1,64 @@
-:root{
-    /*** Global Color Variables ***/
-    --lightBlue: #CEE7F6;
-    --darkBlue: #0077B6;
-    --myGreen: #52B69A;
-    --myRed: #D97878;
+:root {
+  /*** Global Color Variables ***/
+  --lightBlue: #cee7f6;
+  --darkBlue: #0077b6;
+  --myGreen: #52b69a;
+  --myRed: #d97878;
 
-    /*** Global Font Variables ***/
-    --headingFont: 'Montserrat', sans-serif;
-    --logoFont: 'Oswald', sans-serif;
-    --titleFont: 'Playfair Display', serif;
-    --generalFont: 'Inter', sans-serif;
+  /*** Global Font Variables ***/
+  --headingFont: "Montserrat", sans-serif;
+  --titleFont: "Playfair Display", serif;
+  --generalFont: "Inter", sans-serif;  
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
+}
+/*global browser reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
 }

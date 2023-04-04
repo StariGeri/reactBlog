@@ -1,11 +1,17 @@
 import React from "react";
 import "./Home.css";
+import BlogPostCard from "../components/BlogPostCard";
+import Curve from "../components/curve";
 
 function Home() {
   return (
-    <div className="contentWrapper">
-      <h1>HOME</h1>
-    </div>
+    <section className="homeSection">
+      <Curve />
+      <div className="contentWrapper">
+        <BlogPostCard title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." date="2020-01-01" id={1} />
+        <BlogPostCard title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." date="2020-01-01" id={2} />
+      </div>
+    </section>
   );
 }
 
