@@ -1,0 +1,84 @@
+nav{
+    width: 100%;
+    min-height: 100px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navContainer{
+    position: absolute;
+    width: 80%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 2px solid var(--darkBlue);
+}
+.logoWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    font-family: var(--logoFont);
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.menuWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-family: var(--headingFont);
+}
+.menuWrapper h2{
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menuWrapper h2:hover{
+    color: var(--darkBlue);
+}
+.menuWrapper .adminSvg{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menuWrapper .adminSvg:hover{
+    color: var(--darkBlue);
+}
+
+/*Responsive Navbar*/
+@media screen and (max-width: 768px){
+    nav{
+        min-height: 60px;
+    }
+    .navContainer{
+        width: 90%;
+        padding: 0 10px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .menuWrapper h2{
+        font-size: 20px;
+    }
+    .menuWrapper .adminSvg{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+}
