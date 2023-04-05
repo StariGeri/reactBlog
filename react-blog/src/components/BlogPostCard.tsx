@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // react-router-dom is needed to use routing when clicking the button of the blog post card
-import "./BlogPostCard.css";
+import "./componentStyles/BlogPostCard.css";
 import Button from "./Button";
 
 interface Props {

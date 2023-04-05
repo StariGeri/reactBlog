@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LoginForm.css";
+import "./componentStyles/LoginForm.css";
 import Button from "./Button";
 
 function LoginForm() {

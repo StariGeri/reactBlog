@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommentCard.css";
+import "./componentStyles/CommentCard.css";
 
 interface commentProps {
   userNames: string;

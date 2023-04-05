@@ -1,5 +1,5 @@
 import React from "react";
-import "./curve.css";
+import "./componentStyles/Curve.css";
 
 function Curve() {
   return <div className="curve"></div>;

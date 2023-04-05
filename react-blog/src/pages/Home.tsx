@@ -1,7 +1,6 @@
-import React from "react";
-import "./Home.css";
+import "./pageStyles/Home.css";
 import BlogPostCard from "../components/BlogPostCard";
-import Curve from "../components/curve";
+import Curve from "../components/Curve";
 import homeSVG from '/homeSvg.svg';
 
 function Home() {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Admin.css";
+import "./pageStyles/Admin.css";
 import CommentCard from "../components/CommentCard";
 
 function Admin() {

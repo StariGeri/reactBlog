@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
 
 const App:React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App:React.FC = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Login" element={<Login/>}/>
+          <Route path="/Admin" element={<Admin/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>
