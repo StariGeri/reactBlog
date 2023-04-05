@@ -3,13 +3,13 @@
   height: 200px;
   width: 100%;
   background-color: var(--lightBlue);
+  border: none;
 }
 .curve::before {
   content: "";
   display: block;
   position: relative;
   border-radius: 100% 50%;
-  border: 1px solid white;
   width: 55%;
   height: 100%;
   transform: translate(85%, 60%);

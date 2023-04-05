@@ -1,16 +1,16 @@
 nav {
   width: 100%;
   min-height: 100px;
-  background: transparent;
-  position: absolute;
+  background-color:var(--lightBlue);
+  position: sticky;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .navContainer {
+  width: 100%;
   position: absolute;
-  width: 80%;
   max-width: 1200px;
   height: 100%;
   display: flex;
@@ -25,13 +25,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.logo {
-  font-family: var(--headingFont);
-  font-size: 30px;
-  font-weight: 600;
-  color: black;
-  cursor: pointer;
 }
 .menuWrapper {
   display: flex;
@@ -69,11 +62,11 @@ nav {
     min-height: 60px;
   }
   .navContainer {
-    width: 90%;
-    padding: 0 10px;
+    width: 100%;
+    padding: 0 20px;
   }
-  .logo {
-    font-size: 25px;
+  .menuWrapper {
+    gap: 20px;
   }
   .menuWrapper h2 {
     font-size: 20px;

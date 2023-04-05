@@ -1,26 +1,56 @@
-.homeSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100vw;
-    background-color: white;
+.homeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100vw;
+  background-color: white;
+  overflow-x: hidden;
 }
-.homeTitle{
-    font-size: 40px;
-    font-weight: 600;
-    color: black;
-    margin: 70px auto 30px auto;
-    z-index: 2;
-    font-family: var(--titleFont);
+.homeTitle {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  margin: 70px auto 30px auto;
+  z-index: 2;
+  font-family: var(--titleFont);
 }
-.contentWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: white;
+.homeSVG {
+  position: absolute;
+  top: -50%;
+  left: 5%;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+}
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  .homeTitle {
+    font-size: 30px;
+    margin: 50px auto 30px auto;
+  }
+  .homeSVG {
+    width: 200px;
+    height: 200px;
+    top: -30%;
+    left: 5%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .homeSVG {
+    width: 150px;
+    height: 150px;
+    top: -30%;
+  }
 }

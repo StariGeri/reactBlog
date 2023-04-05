@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 import "./Navbar.css";
 
 //navbar component
@@ -9,9 +10,7 @@ function Navbar() {
     <nav>
       <div className="navContainer">
         <div className="logoWrapper">
-          <Link to="/" className="menuLink">
-            <h1 className="logo">DevBlog</h1>
-          </Link>
+          <Logo />
         </div>
         <ul className="menuWrapper">
           <li>

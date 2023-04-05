@@ -36,3 +36,9 @@
   font-size: 14px;
   color: black;
 }
+@media screen and (max-width: 500px) {
+  .blogTitle {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
