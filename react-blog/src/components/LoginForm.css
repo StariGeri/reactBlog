@@ -1,0 +1,36 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    background-color: var(--lightBlue);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.loginForm:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+.loginForm h2{
+    font-size: 24px;
+    font-family: var(--headingFont);
+    font-weight: 500;
+    color: black;
+}
+.loginInputWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+.loginForm label{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--generalFont);
+    color: black;
+    margin: 20px 0 10px 0;
+    align-self: flex-start;
+}

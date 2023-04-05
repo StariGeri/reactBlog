@@ -1,3 +1,9 @@
-h1{
-    font-family: var(--headingFont);
+.loginSection{
+    width: 100%;
+    height: fit-content;
+    min-height: 70vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
