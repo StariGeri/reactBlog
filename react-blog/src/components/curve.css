@@ -1,28 +1,33 @@
 .curve {
-    position: relative;
-    height: 250px;
-    width: 100%;
-    background-color: var(--lightBlue);
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-color: var(--lightBlue);
+}
+.curve::before {
+  content: "";
+  display: block;
+  position: relative;
+  border-radius: 100% 50%;
+  border: 1px solid white;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: white;
+}
+.curve::after {
+  content: "";
+  display: block;
+  position: relative;
+  border-radius: 100% 50%;
+  border: 1px solid var(---lightBlue);
+  width: 55%;
+  height: 100%;
+  background-color: var(--lightBlue);
+  transform: translate(-5%, -57%);
+}
+@media screen and (max-width: 768px) {
+  .curve {
+    height: 100px;
   }
-  .curve::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    border: 1px solid white;
-    width: 55%;
-    height: 100%;
-    transform: translate(85%, 60%);
-    background-color: white;
-  }
-  .curve::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    border: 1px solid var(---lightBlue);
-    width: 55%;
-    height: 100%;
-    background-color: var(--lightBlue);
-    transform: translate(-4%, 40%);
-  }
+}
