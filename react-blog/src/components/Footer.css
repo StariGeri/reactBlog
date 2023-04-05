@@ -7,8 +7,6 @@
   width: 100%;
   height: fit-content;
   margin-top: 100px;
-  flex: auto;
-  flex-shrink: 0;
 }
 .footerCurve {
   position: absolute;

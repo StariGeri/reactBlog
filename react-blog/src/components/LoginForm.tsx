@@ -17,7 +17,10 @@ function LoginForm() {
       </div>
       <div className="loginButtonWrapper">
         <Link to={"/admin"}>
-          <Button text="Login" />
+          <Button text="Login" isReverse={true} />
+        </Link>
+        <Link to={"/"}>
+          <Button text="Back" isOutlined={true} />
         </Link>
       </div>
     </form>

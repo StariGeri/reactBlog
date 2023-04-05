@@ -3,14 +3,16 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 500px;
-    width: 400px;
+    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px;
     background-color: var(--lightBlue);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 .loginForm:hover{
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 119, 182, 0.5);
 }
 .loginForm h2{
     font-size: 24px;
@@ -25,12 +27,53 @@
     align-items: center;
     height: fit-content;
     width: fit-content;
+    padding: 10px;
 }
 .loginForm label{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     font-family: var(--generalFont);
     color: black;
     margin: 20px 0 10px 0;
     align-self: flex-start;
+}
+.loginForm input{
+    height: 40px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--generalFont);
+    color: var(--darkBlue);
+    outline: none;
+    transition: all 0.3s ease;
+}
+.loginButtonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+@media screen and (max-width: 600px) {
+    .loginForm{
+        height: 400px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .loginForm h2{
+        font-size: 20px;
+    }
+    .loginForm label{
+        font-size: 14px;
+    }
+    .loginForm input{
+        height: 30px;
+        width: 100%;
+        max-width: 200px;
+        padding: 0 5px;
+        font-size: 14px;
+    }
 }
