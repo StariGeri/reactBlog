@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import "./Navbar.css";
 
@@ -14,12 +14,12 @@ function Navbar() {
         </div>
         <ul className="menuWrapper">
           <li>
-            <Link to="/" className="menuLink">
+            <NavLink to="/" className="menuLink">
               <h2> Posts</h2>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/Login">
+            <NavLink to="/Login">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ function Navbar() {
                   clipRule="evenodd"
                 />
               </svg>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
