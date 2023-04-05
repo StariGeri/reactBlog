@@ -1,7 +1,36 @@
+.navbarSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*Navbar Curve*/
+.navbarCurve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.navbarCurve svg {
+  position: relative;
+  width: calc(152% + 1.3px);
+  height: 167px;
+  display: block;
+}
+
+.shapeFillTop {
+  fill: #CEE7F6;
+}
+
+
+/*Navbar*/
 nav {
   width: 100%;
   min-height: 100px;
-  background-color: var(--lightBlue);
   position: sticky;
   z-index: 10;
   display: flex;
@@ -51,6 +80,12 @@ nav {
 .menuWrapper h2:hover {
   color: var(--darkBlue);
 }
+.svgMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+}
 .menuWrapper .adminSvg {
   width: 30px;
   height: 30px;
@@ -65,8 +100,14 @@ nav {
 
 /*Responsive Navbar*/
 @media screen and (max-width: 768px) {
+  .navContainer {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   nav {
-    min-height: 60px;
+    min-height: 70px;
   }
   .navContainer {
     width: 100%;
@@ -75,13 +116,9 @@ nav {
   .menuWrapper {
     gap: 20px;
   }
-  .menuWrapper h2 {
-    font-size: 20px;
-  }
-  .menuWrapper .adminSvg {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .navbarCurve svg {
+    position: relative;
+    width: calc(152% + 1.3px);
+    height: 130px;
   }
 }
