@@ -1,0 +1,26 @@
+.notFoundSection {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.notFoundSection h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
+  font-family: var(--generalFont);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .notFoundSection h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .notFoundSection h1 {
+    font-size: 30px;
+  }
+}
