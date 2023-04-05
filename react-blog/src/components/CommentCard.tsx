@@ -2,15 +2,16 @@ import React from "react";
 import "./componentStyles/CommentCard.css";
 
 interface commentProps {
-  userNames: string;
+  userName: string;
   comment: string;
 }
 
-const CommentCard: React.FC<commentProps> = ({ userNames, comment }) => {
+const CommentCard: React.FC<commentProps> = ({ userName, comment }) => {
   return (
     <div className="commentCard">
-      <div className="userNames">{userNames}</div>
-      <div className="comment">{comment}</div>
+      <h2 className="userName">{userName}</h2>
+      <p className="comment">{comment}</p>
+      <div className="commentDivider"></div>
     </div>
   );
 };
