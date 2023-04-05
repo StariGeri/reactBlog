@@ -44,14 +44,15 @@
   .homeSVG {
     width: 200px;
     height: 200px;
-    top: -30%;
-    left: 5%;
+    top: 85%;
+    left: 70%;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
   .homeSVG {
     width: 150px;
     height: 150px;
-    top: -30%;
+    top: 85%;
+    left: 60%;
   }
 }
