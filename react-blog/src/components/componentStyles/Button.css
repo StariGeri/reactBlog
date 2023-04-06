@@ -3,7 +3,7 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 10px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
@@ -36,6 +36,16 @@
   color: white;
   background-color: var(--darkerBlue);
   border: 1px solid var(--darkerBlue);
+}
+.delete {
+  color: var(--myRed);
+  background-color: transparent;
+  border: 1px solid var(--myRed);
+}
+.delete:hover {
+  color: white;
+  background-color: var(--myRed);
+  border: 1px solid var(--myRed);
 }
 @media screen and (max-width: 500px) {
   .basic {

@@ -7,18 +7,28 @@ interface Props {
   title: string;
   date: string;
   id: number;
+  isAdmin?: boolean;
 }
 
-const BlogPostCard: React.FC<Props> = ({ title, date, id }) => {
+const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
   return (
     <li className="cardItem">
       <div className="card">
         <div className="cardContent">
           <h2 className="blogTitle">{title}</h2>
           <p className="blogDate">{date}</p>
-          <Link to={`/blog/${id}`}>
+          {isAdmin ? (
+            <div className="adminButtons">
+              <Link to={`/edit/${id}`}>
+                <Button text="Edit" isOutlined={true} />
+              </Link>
+              <Link to={`/delete/${id}`}>
+                <Button text="Delete" isDelete={true} />
+              </Link>
+            </div>
+          ) : (<Link to={`/blog/${id}`}>
             <Button text="Read" isFilled={true} />
-          </Link>
+          </Link>)}
         </div>
       </div>
     </li>
