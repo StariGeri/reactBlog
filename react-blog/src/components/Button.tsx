@@ -7,6 +7,7 @@ interface buttonProps {
   isOutlined?: boolean;
   isReverse?: boolean;
   isDelete?: boolean;
+  onClick?: () => void;
   type?: string;
 }
 
