@@ -47,6 +47,16 @@
   background-color: var(--myRed);
   border: 1px solid var(--myRed);
 }
+.addNew{
+  color: white;
+  background-color: var(--myGreen);
+  border: 1px solid var(--myGreen);
+}
+.addNew:hover {
+  color: white;
+  background-color: green;
+  border: 1px solid green;
+}
 @media screen and (max-width: 500px) {
   .basic {
     font-size: 14px;

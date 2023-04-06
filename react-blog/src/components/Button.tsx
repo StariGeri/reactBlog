@@ -7,7 +7,7 @@ interface buttonProps {
   isOutlined?: boolean;
   isReverse?: boolean;
   isDelete?: boolean;
-  onClick?: () => void;
+  isAddNew?: boolean;
   type?: string;
 }
 
@@ -17,6 +17,7 @@ const Button: React.FC<buttonProps> = ({
   isOutlined,
   isReverse,
   isDelete,
+  isAddNew,
 }) => {
   const className = [
     "basic",
@@ -24,6 +25,7 @@ const Button: React.FC<buttonProps> = ({
     isOutlined ? "outlined" : "",
     isReverse ? "reverse" : "",
     isDelete ? "delete" : "",
+    isAddNew ? "addNew" : "",
   ].join(" ");
   return <button className={className}>{text}</button>;
 };
