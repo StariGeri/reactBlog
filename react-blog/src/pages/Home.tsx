@@ -1,37 +1,23 @@
 import "./pageStyles/Home.css";
-import BlogPostCard from "../components/BlogPostCard";
 import homeSVG from '/homeSvg.svg';
+import BlogPosts from "../components/BlogPosts";
+
+
+const blogPosts = [
+  { title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", date: "2022-01-01" },
+  { title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", date: "2022-01-02" },
+  { title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", date: "2022-01-03" },
+];
 
 function Home() {
   return (
     <section className="homeSection">
+      <div className="pageButtonContainer">
+
+      </div>
       <h1 className="homeTitle">Latest Posts</h1>
       <div className="contentWrapper">
-        <BlogPostCard
-          title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          date="2020-01-01"
-          id={1}
-        />
-        <BlogPostCard
-          title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          date="2020-01-01"
-          id={2}
-        />
-        <BlogPostCard
-          title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          date="2020-01-01"
-          id={3}
-        />
-        <BlogPostCard
-          title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          date="2020-01-01"
-          id={4}
-        />
-        <BlogPostCard
-          title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          date="2020-01-01"
-          id={4}
-        />
+        <BlogPosts posts={blogPosts} />
         <div className="svgContainer">
           <img src={homeSVG} className="homeSVG" />
         </div>

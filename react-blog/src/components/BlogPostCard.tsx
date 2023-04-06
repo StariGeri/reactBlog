@@ -8,6 +8,7 @@ interface Props {
   date: string;
   id: number;
   isAdmin?: boolean;
+  key?: number;
 }
 
 const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
