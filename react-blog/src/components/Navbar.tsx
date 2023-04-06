@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import "./componentStyles/Navbar.css";
 
-//navbar component
-
 function Navbar() {
   return (
     <section className="navbarSection">
@@ -24,7 +22,7 @@ function Navbar() {
                 <h2> Posts</h2>
               </NavLink>
             </li>
-            <li className ="svgMenu">
+            <li className="svgMenu">
               <NavLink to="/Login">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,42 @@
+.commentSection {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.commentSectionDivider {
+  width: 60%;
+  max-width: 800px;
+  height: 1px;
+  background-color: var(--lightBlue);
+  margin: 20px 0;
+}
+.commentTitle {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  margin: 50px auto;
+  font-family: var(--headingFont);
+}
+.commentTitleWrapper {
+  width: 100%;
+}
+.commentSubTitle {
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+  margin: 30px auto 20px auto;
+  font-family: var(--headingFont);
+  letter-spacing: 1px;
+}
+.commentList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

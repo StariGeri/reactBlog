@@ -1,0 +1,44 @@
+.commentForm {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.commentForm input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  stroke: none;
+  background-color: var(--myGray);
+}
+.commentForm textarea {
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  stroke: none;
+  resize: none;
+  background-color: var(--myGray);
+}
+::placeholder {
+  font-family: var(--headingFont);
+  font-size: 14px;
+}
+::-moz-placeholder {
+  font-family: var(--headingFont);
+  font-size: 14px;
+}
+:-ms-input-placeholder {
+  font-family: var(--headingFont);
+  font-size: 14px;
+}

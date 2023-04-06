@@ -18,8 +18,8 @@
 }
 .homeSVG {
   position: absolute;
-  top: -50%;
-  left: 5%;
+  bottom: -10%;
+  right: 0%;
   z-index: 0;
   width: 300px;
   height: 300px;
@@ -36,7 +36,7 @@
   background-color: white;
   margin-bottom: 100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .homeTitle {
     font-size: 30px;
     margin: 50px auto 30px auto;
@@ -44,15 +44,13 @@
   .homeSVG {
     width: 200px;
     height: 200px;
-    top: 85%;
-    left: 70%;
+    bottom: -10%;
+    right: 0%;
   }
 }
 @media screen and (max-width: 600px) {
   .homeSVG {
     width: 150px;
     height: 150px;
-    top: 85%;
-    left: 60%;
   }
 }

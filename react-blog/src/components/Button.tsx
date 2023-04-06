@@ -6,6 +6,7 @@ interface buttonProps {
   isFilled?: boolean;
   isOutlined?: boolean;
   isReverse?: boolean;
+  type?: string;
 }
 
 const Button: React.FC<buttonProps> = ({

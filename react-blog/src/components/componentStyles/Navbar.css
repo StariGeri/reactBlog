@@ -4,7 +4,7 @@
   height: 100%;
 }
 
-/*Navbar Curve*/
+
 .navbarCurve {
   position: absolute;
   top: 0;
@@ -30,7 +30,7 @@
 /*Navbar*/
 nav {
   width: 100%;
-  min-height: 100px;
+  height: 180px;
   position: sticky;
   z-index: 10;
   display: flex;
@@ -44,8 +44,8 @@ nav {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
+  align-items: flex-start;
+  padding: 30px;
 }
 .menuLink {
   text-decoration: none;
@@ -101,7 +101,11 @@ nav {
 /*Responsive Navbar*/
 @media screen and (max-width: 768px) {
   .navContainer {
-    padding: 0 30px;
+    padding: 30px;
+    margin-top: 10px;
+  }
+  .logoWrapper{
+    margin-top: 6px;
   }
 }
 

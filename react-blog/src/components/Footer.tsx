@@ -21,7 +21,7 @@ function Footer() {
         <div className="footerContent">
           <Logo />
           <p className="footerText">
-            This website was designed and developed by Gergo Sarosta as an
+            This website was designed and developed by Gergo Starosta as an
             interview task.
           </p>
         </div>
