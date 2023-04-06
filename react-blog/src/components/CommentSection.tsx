@@ -18,7 +18,7 @@ const CommentSection: React.FC = () => {
     <div className="commentSection">
       <div className="commentSectionDivider"></div>
       <div className="commentTitleWrapper">
-        <h1 className="commentTitle">Comments</h1>
+        <h1 className="commentTitle">Comments ({comments.length})</h1>
       </div>
       <ul className="commentList">
         {comments.map((comment, index) => (
