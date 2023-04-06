@@ -4,14 +4,14 @@
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
-  margin-top: 20px;
+  margin: 20px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .commentSectionDivider {
-  width: 60%;
+  width: 80%;
   max-width: 800px;
   height: 1px;
   background-color: var(--lightBlue);
@@ -39,4 +39,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .commentTitle {
+    font-size: 30px;
+    margin: 50px auto;
+  }
+  .commentSubTitle {
+    font-size: 20px;
+    margin: 20px auto 10px auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .commentTitle {
+    font-size: 24px;
+    margin: 50px auto;
+  }
+  .commentSubTitle {
+    font-size: 18px;
+    margin: 20px auto 10px auto;
+  }
 }

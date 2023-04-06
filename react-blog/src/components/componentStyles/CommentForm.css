@@ -1,6 +1,6 @@
 .commentForm {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   padding: 20px;
   border-radius: 10px;
   display: flex;
@@ -10,7 +10,8 @@
   gap: 20px;
 }
 .commentForm input {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 30px;
   border-radius: 5px;
   padding: 5px;
@@ -20,7 +21,8 @@
   background-color: var(--myGray);
 }
 .commentForm textarea {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 100px;
   border-radius: 5px;
   padding: 5px;
@@ -33,12 +35,15 @@
 ::placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
+  color: black;
 }
 ::-moz-placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
+  color: black;
 }
 :-ms-input-placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
+  color: black;
 }
