@@ -19,6 +19,7 @@
   font-size: 20px;
   margin: 20px;
   padding-left: 5px;
+  cursor: pointer;
 
   /*removing the default down-arrow*/
   appearance: none;

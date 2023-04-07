@@ -20,7 +20,7 @@ const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
           <p className="blogDate">{date}</p>
           {isAdmin ? (
             <div className="adminButtons">
-              <Link to={`/edit`}> {/* /edit/${id} This is where the id of the blog post will be passed to the Edit page */}
+              <Link to={`/edit/${id}`}> {/* /edit/${id} This is where the id of the blog post will be passed to the Edit page */}
                 <Button text="Edit" isOutlined={true} />
               </Link>
               <Link to={`/delete/${id}`}>

@@ -84,7 +84,9 @@ const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
                 </div>}
             {/*mapping the fetched posts to the BlogPostCard component*/}
             {posts.map((post) => (
-                <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} />
+                //if the component is being used in the admin page, the isAdmin prop is passed in
+                (isAdmin) ? <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} isAdmin={true} /> :
+                    <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} />
             ))}
             {/*pagination buttons*/}
             <div className="pageNumbers">
