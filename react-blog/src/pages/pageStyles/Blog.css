@@ -21,6 +21,14 @@
   display: flex;
   justify-content: flex-start;
 }
+.blogContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 .blogPostDate {
   font-size: 18px;
   font-weight: 300;

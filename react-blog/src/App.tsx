@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 //import components
 import Navbar from "./components/Navbar";
@@ -13,21 +13,21 @@ import Blog from "./pages/Blog";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Login" element={<Login/>}/>
-          <Route path="/Admin" element={<Admin/>}/>
-          <Route path="/New" element={<New/>}/>
-          <Route path="/Edit" element={<Edit/>}/>
-          <Route path="/Blog/:id" element={<Blog title="Lorem ipsum is fake" date="2020.01.10." id={1} content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/New" element={<New />} />
+          <Route path="/Edit" element={<Edit />} />
+          <Route path="/Blog/:id" element={<Blog />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
