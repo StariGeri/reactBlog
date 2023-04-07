@@ -1,80 +1,98 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+//components
+import "./componentStyles/BlogPosts.css";
 import BlogPostCard from "./BlogPostCard";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 
-import "./componentStyles/BlogPosts.css";
-
-interface BlogPostProps {
+//interface for the fetched posts
+interface BlogPost {
+    id: number;
     title: string;
-    date: string;
+    body: string;
+    createdAt: string;
 }
-
-interface BlogListProps {
-    posts: BlogPostProps[];
+//if the component is being used in the admin page, the isAdmin prop is passed in
+interface displayProps {
     isAdmin?: boolean;
 }
 
-const BlogPosts: React.FC<BlogListProps> = ({ posts, isAdmin }) => {
-    const [postsPerPage, setPostsPerPage] = useState<number>(2);
+const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
+    //state for the fetched posts
+    const [posts, setPosts] = useState<BlogPost[]>([]);
+    //states for pagination
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const [pageSize, setPageSize] = useState<number>(3);
+    const [totalPages, setTotalPages] = useState<number>(0);
 
-    const totalPages = Math.ceil(posts.length / postsPerPage);
+    //fetching the posts using axios
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await axios.get(
+                    `https://futurioninterview2.azurewebsites.net/BlogPost`
+                );
+                setPosts(response.data.results);
+                //console.log(response.data);//for debugging purposes
+                setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+            } catch (error) {
+                console.error(error);
+            }
+        };
 
+        fetchPosts();
+    }, [currentPage, pageSize]);
+
+    //pagination logic
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
     };
 
-    const handlePostsPerPageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setPostsPerPage(Number(event.target.value));
+    const handlePageSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setPageSize(Number(event.target.value));
         setCurrentPage(1);
     };
 
-    const startIndex = (currentPage - 1) * postsPerPage;
-    const endIndex = startIndex + postsPerPage;
-    const currentPosts = posts.slice(startIndex, endIndex);
+    //formatting the fetched createdAt date
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString();
+    };
 
     return (
         <div>
+            {/*depending on the isAdmin bool, the NEW button is displayed too*/}
             {isAdmin ?
                 <div className="dropdownContainer">
-                    <select className="paginateDropdown" id="postsPerPage" value={postsPerPage} onChange={handlePostsPerPageChange}>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={5}>5</option>
-                        <option value={10}>10</option>
+                    <select value={pageSize} onChange={handlePageSizeChange} className="paginateDropdown">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
                     </select>
                     <Link to="/new">
                         <Button text="+ New" isAddNew={true} />
                     </Link>
-                </div> :
-                <div className="dropdownContainer">
-                    <select className="paginateDropdown" id="postsPerPage" value={postsPerPage} onChange={handlePostsPerPageChange}>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={5}>5</option>
-                        <option value={10}>10</option>
+                </div> : <div className="dropdownContainer">
+                    <select value={pageSize} onChange={handlePageSizeChange} className="paginateDropdown">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
                     </select>
-                </div>//if isAdmin is false (or not set) the New button won't be rendered
-            }
-            {currentPosts.map((post, index) => (
-                //if isAdmin is true, then the admin buttons will be rendered
-                (isAdmin) ? <BlogPostCard id={index} key={index} title={post.title} date={post.date} isAdmin={true} /> : <BlogPostCard id={index} key={index} title={post.title} date={post.date} />
+                </div>}
+            {/*mapping the fetched posts to the BlogPostCard component*/}
+            {posts.map((post) => (
+                <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} />
             ))}
+            {/*pagination buttons*/}
             <div className="pageNumbers">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                    (pageNumber) => (
-                        <button
-                            key={pageNumber}
-                            onClick={() => handlePageChange(pageNumber)}
-                            disabled={currentPage === pageNumber}
-                        >
-                            {pageNumber}
-                        </button>
-                    )
-                )}
+                {[...Array(totalPages)].map((_, index) => (
+                    <button key={index} onClick={() => handlePageChange(index + 1)} disabled={currentPage === index + 1} className="">
+                        {index + 1}
+                    </button>
+                ))}
             </div>
         </div>
     );
