@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "./componentStyles/LoginForm.css";
-import Button from "./Button";
+import "./LoginForm.css";
+import Button from "../generalComponents/Button";
 
 function LoginForm() {
   return (

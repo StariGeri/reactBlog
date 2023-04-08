@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "./componentStyles/MouseTrailer.css";
+import "./MouseTrailer.css";
 
 interface Coords {
   x: number;

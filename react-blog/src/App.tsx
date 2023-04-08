@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 //import components
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import MouseTrailer from "./components/MouseTrailer";
+import Navbar from "./components/generalComponents/Navbar";
+import Footer from "./components/generalComponents/Footer";
+import MouseTrailer from "./components/generalComponents/MouseTrailer";
 //import pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";

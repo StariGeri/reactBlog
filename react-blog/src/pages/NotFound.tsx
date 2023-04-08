@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./pageStyles/NotFound.css";
-import Button from "../components/Button";
+import Button from "../components/generalComponents/Button";
 
 function NotFound() {
   return (

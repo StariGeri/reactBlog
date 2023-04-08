@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import CommentForm from "../components/CommentForm";
+import CommentForm from "./CommentForm";
 import CommentCard from "./CommentCard";
-import "./componentStyles/CommentSection.css";
+import "./CommentSection.css";
 
 interface Comment {
   userName: string;

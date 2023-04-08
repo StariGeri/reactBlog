@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 //components
-import "./componentStyles/BlogPosts.css";
+import "./BlogPosts.css";
 import BlogPostCard from "./BlogPostCard";
-import Button from "./Button";
+import Button from "../generalComponents/Button";
 
 //interface for the fetched posts
 interface BlogPost {

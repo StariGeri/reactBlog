@@ -1,8 +1,8 @@
 // Form component where user can input new blog post data
 import { useState } from 'react';
 import axios from 'axios';
-import './componentStyles/NewForm.css'
-import Button from './Button';
+import './NewForm.css';
+import Button from '../generalComponents/Button';
 import { Link } from 'react-router-dom';
 
 interface FormProps {

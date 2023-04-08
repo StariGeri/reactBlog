@@ -1,5 +1,5 @@
 import "./pageStyles/Admin.css";
-import BlogPosts from "../components/BlogPosts";
+import BlogPosts from "../components/blogComponents/BlogPosts";
 
 
 function Admin() {

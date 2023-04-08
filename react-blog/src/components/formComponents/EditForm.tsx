@@ -1,5 +1,5 @@
-import './componentStyles/EditForm.css';
-import Button from './Button';
+import './EditForm.css';
+import Button from '../generalComponents/Button';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';

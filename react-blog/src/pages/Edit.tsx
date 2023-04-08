@@ -1,5 +1,5 @@
 import "./pageStyles/Edit.css";
-import EditForm from "../components/EditForm";
+import EditForm from "../components/formComponents/EditForm";
 
 
 

@@ -1,6 +1,6 @@
 import "./pageStyles/Home.css";
 import homeSVG from '/homeSvg.svg';
-import BlogPosts from "../components/BlogPosts";
+import BlogPosts from "../components/blogComponents/BlogPosts";
 
 function Home() {
   return (

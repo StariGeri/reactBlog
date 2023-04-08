@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./componentStyles/BlogPostCard.css";
-import Button from "./Button";
+import "./BlogPostCard.css";
+import Button from "../generalComponents/Button";
 
 interface Props {
   title: string;

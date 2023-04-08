@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import Button from "../components/Button";
-import CommentSection from "../components/CommentSection";
+import Button from "../components/generalComponents/Button";
+import CommentSection from "../components/commentComponents/CommentSection";
 import "./pageStyles/Blog.css";
 
 function Blog() {

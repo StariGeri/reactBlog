@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './componentStyles/CommentForm.css';
-import Button from './Button';
+import './CommentForm.css';
+import Button from '../generalComponents/Button';
 
 interface Comment {
   userName: string;
