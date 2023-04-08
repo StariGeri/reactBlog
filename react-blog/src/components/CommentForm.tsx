@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import './componentStyles/CommentForm.css';
 import Button from './Button';
 
 interface Comment {
-  author: string;
+  userName: string;
   text: string;
+  id?: number;
 }
 
 interface Props {
@@ -12,13 +15,13 @@ interface Props {
 }
 
 const CommentForm: React.FC<Props> = ({ onSubmit }) => {
-  const [author, setAuthor] = useState('');
+  const [userName, setUsername] = useState('');
   const [text, setText] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit({ author, text });
-    setAuthor('');
+    onSubmit({ userName, text });
+    setUsername('');
     setText('');
   };
 
@@ -27,8 +30,8 @@ const CommentForm: React.FC<Props> = ({ onSubmit }) => {
       <input
         type="text"
         id="author"
-        value={author}
-        onChange={(event) => setAuthor(event.target.value)}
+        value={userName}
+        onChange={(event) => setUsername(event.target.value)}
         required
         placeholder='Username'
       />

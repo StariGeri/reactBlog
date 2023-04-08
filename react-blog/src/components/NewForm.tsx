@@ -11,13 +11,13 @@ interface FormProps {
 
 const NewForm = ({ onSubmit }: FormProps) => {
     const [title, setTitle] = useState('');
-    const [date, setDate] = useState('');
     const [content, setContent] = useState('');
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const response = await axios.post('/api/blog', { title, date, content });
-        const newBlogPostId = response.data.id;
+        const response = await axios.post('https://futurioninterview2.azurewebsites.net/BlogPost', { title: title, body: content });
+        const newBlogPostId = response.data;
+        //console.log(newBlogPostId);
         onSubmit(newBlogPostId);
     };
 
@@ -27,20 +27,15 @@ const NewForm = ({ onSubmit }: FormProps) => {
                 <label>
                     Title
                 </label>
-                <input type="text" value={title} onChange={event => setTitle(event.target.value)} />
-                <label>
-                    Date
-                </label>
-                <input type="text" value={date} onChange={event => setDate(event.target.value)} />
-
+                <input type="text" value={title} onChange={event => setTitle(event.target.value)} required />
                 <label>
                     Content
                 </label>
-                <textarea value={content} onChange={event => setContent(event.target.value)} />
+                <textarea value={content} onChange={event => setContent(event.target.value)} required />
                 <div className="formButtonContainer">
                     <Button isFilled={true} type="submit" text="Add Post" />
                     <Link to="/Admin">
-                        <Button isOutlined={true} text="Discard" />
+                        <Button isOutlined={true} text="Discard"/>
                     </Link>
                 </div>
             </form>

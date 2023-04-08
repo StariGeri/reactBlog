@@ -34,7 +34,7 @@ const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
                     `https://futurioninterview2.azurewebsites.net/BlogPost`
                 );
                 setPosts(response.data.results);
-                //console.log(response.data);//for debugging purposes
+                console.log(response.data);//for debugging purposes
                 setTotalPages(Math.ceil(response.data.totalCount / pageSize));
             } catch (error) {
                 console.error(error);

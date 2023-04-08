@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // react-router-dom is needed to use routing when clicking the button of the blog post card
+import axios from "axios";
+import { Link } from "react-router-dom";
 import "./componentStyles/BlogPostCard.css";
 import Button from "./Button";
 
@@ -12,6 +13,19 @@ interface Props {
 }
 
 const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
+  // This function will delete the blog post from the database using axios
+  const handleDelete = () => {
+    console.log("Delete button clicked");
+    axios
+      .delete(`https://futurioninterview2.azurewebsites.net/BlogPost/${id}`)
+      .then((response) => {
+        //console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <li className="cardItem">
       <div className="card">
@@ -23,8 +37,8 @@ const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
               <Link to={`/edit/${id}`}> {/* /edit/${id} This is where the id of the blog post will be passed to the Edit page */}
                 <Button text="Edit" isOutlined={true} />
               </Link>
-              <Link to={`/delete/${id}`}>
-                <Button text="Delete" isDelete={true} />
+              <Link to={"/"}>
+                <Button text="Delete" isDelete={true} onPress={handleDelete} />
               </Link>
             </div>
           ) : (<Link to={`/blog/${id}`}>

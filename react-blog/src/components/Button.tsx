@@ -9,6 +9,7 @@ interface buttonProps {
   isDelete?: boolean;
   isAddNew?: boolean;
   type?: string;
+  onPress?: () => void;
 }
 
 const Button: React.FC<buttonProps> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<buttonProps> = ({
   isReverse,
   isDelete,
   isAddNew,
+  onPress
 }) => {
   const className = [
     "basic",
@@ -27,7 +29,8 @@ const Button: React.FC<buttonProps> = ({
     isDelete ? "delete" : "",
     isAddNew ? "addNew" : "",
   ].join(" ");
-  return <button className={className}>{text}</button>;
+
+  return <button className={className} onClick={onPress}>{text}</button>;
 };
 
 export default Button;

@@ -1,29 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import CommentForm from "../components/CommentForm";
 import CommentCard from "./CommentCard";
 import "./componentStyles/CommentSection.css";
 
 interface Comment {
-  author: string;
+  userName: string;
   text: string;
+  id?: number;
 }
 
 const CommentSection: React.FC = () => {
-  const [comments, setComments] = useState<Comment[]>([]);
+  //getting the id from the url we are on
+  const { id } = useParams<{ id: string }>();
 
-  const handleSubmit = (comment: Comment) => {
-    setComments([...comments, comment]);
+
+  //fetching the blog post data from the api using the id we fetched
+  const [fetchComments, setFetchComments] = useState<Comment[]>([]);
+  const fetchBlogPostData = async () => {
+    try {
+      const response = await axios.get(
+        `https://futurioninterview2.azurewebsites.net/Comment/${id}`
+      );
+      setFetchComments(response.data.results);
+      //console.log(response.data.results);
+    } catch (error) {
+      console.error(error);
+    }
   };
+
+  useEffect(() => {
+    fetchBlogPostData();
+  }, [id]);
+
+
+  const handleSubmit = async (comment: Comment) => {
+    await axios.post(`https://futurioninterview2.azurewebsites.net/Comment/${id}`, comment);
+    fetchBlogPostData();
+  };
+
   return (
     <div className="commentSection">
       <div className="commentSectionDivider"></div>
       <div className="commentTitleWrapper">
-        <h1 className="commentTitle">Comments ({comments.length})</h1>
+        <h1 className="commentTitle">Comments ({fetchComments.length})</h1>
       </div>
       <ul className="commentList">
-        {comments.map((comment, index) => (
-          <li key={index}>
-            <CommentCard userName={comment.author} comment={comment.text} />
+        {fetchComments.map((comment) => (
+          <li key={comment.id}>
+            <CommentCard userName={comment.userName} comment={comment.text} />
           </li>
         ))}
       </ul>
