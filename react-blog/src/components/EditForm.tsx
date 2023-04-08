@@ -1,6 +1,6 @@
 import './componentStyles/EditForm.css';
 import Button from './Button';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -34,6 +34,8 @@ const EditForm = () => {
         setBody(fetchBlogPost.body);
     }, [fetchBlogPost]);
 
+    const navigate = useNavigate();
+
     const handleEdit = async () => {
         try {
             const response = await axios.put(`https://futurioninterview2.azurewebsites.net/BlogPost/${id}`, {
@@ -41,6 +43,7 @@ const EditForm = () => {
                 body,
             });
             console.log(response);
+            navigate(`/blog/${id}`);
         } catch (error) {
             console.error(error);
         }
@@ -48,21 +51,19 @@ const EditForm = () => {
 
     return (
         <div className="editFormWrapper">
-            <form className="editForm">
+            <div className="editForm">
                 <label>Title</label>
                 <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
 
                 <label>Content</label>
                 <textarea value={body} onChange={(e) => setBody(e.target.value)} />
                 <div className="formButtonContainer">
-                    <Link to="/">
-                        <Button isFilled={true} type="submit" text="Save Changes" onPress={handleEdit} />
-                    </Link>
+                    <Button isFilled={true} type="submit" text="Save Changes" onPress={handleEdit} />
                     <Link to="/Admin">
                         <Button isOutlined={true} text="Discard" />
                     </Link>
                 </div>
-            </form>
+            </div>
         </div>
     );
 };
