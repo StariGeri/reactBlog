@@ -4,6 +4,7 @@ import "./App.css";
 //import components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import MouseTrailer from "./components/MouseTrailer";
 //import pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <MouseTrailer />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

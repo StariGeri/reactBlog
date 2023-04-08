@@ -9,6 +9,7 @@
 .paginateDropdown {
   width: 50px;
   height: 40px;
+  z-index: 1;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -27,7 +28,7 @@
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
-
+ 
   /*Adding my own down-arrow*/
   background-image: url("/downArrow.svg");
   background-repeat: no-repeat;
