@@ -1,13 +1,21 @@
+.blogPostSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 1200px;
+}
 .dropdownContainer {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px;
 }
-
 .paginateDropdown {
-  width: 50px;
+  width: 55px;
   height: 40px;
   z-index: 1;
   border: none;
@@ -28,16 +36,33 @@
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
- 
+
   /*Adding my own down-arrow*/
   background-image: url("/downArrow.svg");
   background-repeat: no-repeat;
   background-size: 20px;
-  background-position: calc(100% - 5px) center;
+  background-position: calc(100% - 2px) center;
 }
 .paginateDropdown option {
   color: black;
   background-color: var(--lightBlue);
+}
+.newButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+}
+.blogPostList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
 }
 .pageNumbers {
   display: flex;
@@ -45,6 +70,8 @@
   align-items: center;
   gap: 10px;
   margin: 50px 0 0 0;
+  width: 100%;
+  max-width: 800px;
 }
 .pageNumbers button {
   border: none;
@@ -62,4 +89,16 @@
 .pageNumbers button:disabled {
   cursor: not-allowed;
   color: var(--darkBlue);
+}
+@media screen and (max-width: 768px) {
+  .pageNumbers button {
+    font-size: 16px;
+  }
+  .paginateDropdown {
+    width: 60px;
+    height: 40px;
+    padding-left: 0px;
+    background-size: 16px;
+    background-position: calc(100% - 3px) center;
+  }
 }

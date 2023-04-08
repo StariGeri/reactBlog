@@ -23,7 +23,7 @@ const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     //states for pagination
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const [pageSize, setPageSize] = useState<number>(3);
+    const [pageSize, setPageSize] = useState<number>(10);
     const [totalPages, setTotalPages] = useState<number>(0);
 
     //fetching the posts using axios
@@ -61,33 +61,37 @@ const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
     };
 
     return (
-        <div>
+        <div className="blogPostSection">
             {/*depending on the isAdmin bool, the NEW button is displayed too*/}
             {isAdmin ?
                 <div className="dropdownContainer">
                     <select value={pageSize} onChange={handlePageSizeChange} className="paginateDropdown">
-                        <option value="3">3</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
+                        <option value="30">30</option>
                     </select>
-                    <Link to="/new">
-                        <Button text="+ New" isAddNew={true} />
-                    </Link>
+                    <div className="newButtonContainer">
+                        <Link to="/new">
+                            <Button text="+ New" isAddNew={true} />
+                        </Link>
+                    </div>
                 </div> : <div className="dropdownContainer">
                     <select value={pageSize} onChange={handlePageSizeChange} className="paginateDropdown">
-                        <option value="3">3</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="20">20</option>
+                        <option value="30">30</option>
                     </select>
                 </div>}
             {/*mapping the fetched posts to the BlogPostCard component*/}
-            {posts.map((post) => (
-                //if the component is being used in the admin page, the isAdmin prop is passed in
-                (isAdmin) ? <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} isAdmin={true} /> :
-                    <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} />
-            ))}
+            <div className="blogPostList">
+                {posts.map((post) => (
+                    //if the component is being used in the admin page, the isAdmin prop is passed in
+                    (isAdmin) ? <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} isAdmin={true} /> :
+                        <BlogPostCard key={post.id} id={post.id} title={post.title} date={formatDate(post.createdAt)} />
+                ))}
+            </div>
             {/*pagination buttons*/}
             <div className="pageNumbers">
                 {[...Array(totalPages)].map((_, index) => (

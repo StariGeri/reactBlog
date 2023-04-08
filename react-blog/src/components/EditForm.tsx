@@ -58,7 +58,7 @@ const EditForm = () => {
                 <label>Content</label>
                 <textarea value={body} onChange={(e) => setBody(e.target.value)} />
                 <div className="formButtonContainer">
-                    <Button isFilled={true} type="submit" text="Save Changes" onPress={handleEdit} />
+                    <Button isFilled={true} type="submit" text="Save" onPress={handleEdit} />
                     <Link to="/Admin">
                         <Button isOutlined={true} text="Discard" />
                     </Link>
