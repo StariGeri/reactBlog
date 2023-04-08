@@ -13,5 +13,3 @@ reactBlog is a frontend webapplication created as the part of an interview proce
 * TypeScript
 * Vite
 * VsCode, npm, Git
-
-The website is available on: [reactblog.starigeri.hu](https://reactblog.starigeri.hu/)
