@@ -2,6 +2,8 @@ import "./pageStyles/Home.css";
 import homeSVG from '/homeSvg.svg';
 import BlogPosts from "../components/blogComponents/BlogPosts";
 
+import { ToastContainer } from "react-toastify";
+
 function Home() {
   return (
     <section className="homeSection">
@@ -15,6 +17,7 @@ function Home() {
           <img src={homeSVG} className="homeSVG" />
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }

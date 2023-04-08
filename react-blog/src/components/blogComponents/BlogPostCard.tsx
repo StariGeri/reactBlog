@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./BlogPostCard.css";
 import Button from "../generalComponents/Button";
+import { toast } from "react-toastify";
 
 interface Props {
   title: string;
@@ -13,9 +14,22 @@ interface Props {
 }
 
 const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
+
+  //send a notification when a post is deleted
+  const notify = () => toast.error("Post Deleted, it's gone!", {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+
   // This function will delete the blog post from the database using axios
   const handleDelete = () => {
-    console.log("Delete button clicked");
+    //console.log("Delete button clicked");
     axios
       .delete(`https://futurioninterview2.azurewebsites.net/BlogPost/${id}`)
       .then((response) => {
@@ -24,6 +38,7 @@ const BlogPostCard: React.FC<Props> = ({ title, date, id, isAdmin }) => {
       .catch((error) => {
         console.error(error);
       });
+      notify();
   };
 
   return (

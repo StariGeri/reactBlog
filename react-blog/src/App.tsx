@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
 //import components
 import Navbar from "./components/generalComponents/Navbar";
 import Footer from "./components/generalComponents/Footer";
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         </Routes>
         <Footer />
       </div>
+      <ToastContainer/>
     </Router>
   );
 }

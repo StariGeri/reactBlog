@@ -3,6 +3,8 @@ import Button from '../generalComponents/Button';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface BlogPost {
     title: string;
@@ -35,7 +37,16 @@ const EditForm = () => {
     }, [fetchBlogPost]);
 
     const navigate = useNavigate();
-
+    const notify = async () => toast.success('Changes Saved!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     const handleEdit = async () => {
         try {
             const response = await axios.put(`https://futurioninterview2.azurewebsites.net/BlogPost/${id}`, {
@@ -47,6 +58,7 @@ const EditForm = () => {
         } catch (error) {
             console.error(error);
         }
+        notify();
     };
 
     return (

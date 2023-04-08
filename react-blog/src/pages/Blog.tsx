@@ -5,6 +5,7 @@ import Button from "../components/generalComponents/Button";
 import CommentSection from "../components/commentComponents/CommentSection";
 import "./pageStyles/Blog.css";
 
+
 function Blog() {
     //getting the id from the url we are on
     const { id } = useParams<{ id: string }>();
