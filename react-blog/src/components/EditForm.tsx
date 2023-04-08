@@ -42,7 +42,7 @@ const EditForm = () => {
                 title,
                 body,
             });
-            console.log(response);
+            //console.log(response);
             navigate(`/blog/${id}`);
         } catch (error) {
             console.error(error);

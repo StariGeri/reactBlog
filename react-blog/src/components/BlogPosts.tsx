@@ -31,10 +31,10 @@ const BlogPosts: React.FC<displayProps> = ({ isAdmin }) => {
         const fetchPosts = async () => {
             try {
                 const response = await axios.get(
-                    `https://futurioninterview2.azurewebsites.net/BlogPost`
+                    `https://futurioninterview2.azurewebsites.net/BlogPost/?page=${currentPage}&pageSize=${pageSize}`
                 );
                 setPosts(response.data.results);
-                console.log(response.data);//for debugging purposes
+                //console.log(response.data);//for debugging purposes
                 setTotalPages(Math.ceil(response.data.totalCount / pageSize));
             } catch (error) {
                 console.error(error);
