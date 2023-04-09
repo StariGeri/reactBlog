@@ -1,9 +1,9 @@
 version: "3.4" 
  
 services: 
-    stariReactBlog: 
-        image: stariReactBlog 
-        container_name: stariReactBlog 
+    starireactblog: 
+        image: starireactblog 
+        container_name: starireactblog 
         build: 
             context: . 
             dockerfile: ./Dockerfile 
