@@ -1,6 +1,6 @@
 # ==== CONFIGURE ===== 
 # Use a Node 18.15 
-FROM 18.15-bullseye 
+FROM node:18.15-bullseye 
 # Set the working directory to /app inside the container 
 WORKDIR /app 
 # Copy app files 
