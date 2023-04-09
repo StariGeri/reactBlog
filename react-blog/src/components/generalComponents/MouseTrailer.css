@@ -10,6 +10,9 @@
     pointer-events: none;
     opacity: 0.7;
 }
+#dark .circle{
+    background-color: var(--lightBlue);
+}
 @media screen and (max-width: 920px) {
     .circle{
         display: none;

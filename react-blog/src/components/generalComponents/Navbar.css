@@ -74,11 +74,23 @@ nav {
   transition: all 0.3s ease;
   text-decoration: none;
 }
+#dark .menuWrapper h2 {
+  color: white;
+}
+#dark .menuWrapper h2:hover {
+  color: var(--lightBlue);
+}
 .active h2{
   color: var(--darkBlue);
 }
+#dark .active h2{
+  color: var(--lightBlue);
+}
 .active .adminSvg{
   fill: var(--darkBlue);
+}
+#dark .active .adminSvg{
+  fill: var(--lightBlue);
 }
 .menuWrapper h2:hover {
   color: var(--darkBlue);
@@ -97,8 +109,14 @@ nav {
   transition: all 0.3s ease;
   text-decoration: none;
 }
+#dark .menuWrapper .adminSvg {
+  color: white;
+}
 .menuWrapper .adminSvg:hover {
   color: var(--darkBlue);
+}
+#dark .menuWrapper .adminSvg:hover {
+  color: var(--lightBlue);
 }
 .switchContainer{
   padding-top: 8px;
