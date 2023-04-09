@@ -1,7 +1,8 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
+import  ReactSwitch from "react-switch";
 //import components
 import Navbar from "./components/generalComponents/Navbar";
 import Footer from "./components/generalComponents/Footer";
@@ -15,12 +16,22 @@ import Blog from "./pages/Blog";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
 
-const App: React.FC = () => {
+export const ThemeContext = createContext({} as any);
+
+function App() {
+  const [theme,setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
   return (
     <Router>
-      <div className="App">
+      <ThemeContext.Provider value={{theme, toggleTheme}}>
+      <div className="App" id={theme}>
         <MouseTrailer />
         <Navbar />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
@@ -32,6 +43,7 @@ const App: React.FC = () => {
         </Routes>
         <Footer />
       </div>
+      </ThemeContext.Provider>
       <ToastContainer/>
     </Router>
   );

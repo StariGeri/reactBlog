@@ -25,6 +25,9 @@
 .shapeFillTop {
   fill: #CEE7F6;
 }
+#dark .shapeFillTop {
+  fill: var(--darkerBlue);
+}
 
 
 /*Navbar*/
@@ -96,6 +99,9 @@ nav {
 }
 .menuWrapper .adminSvg:hover {
   color: var(--darkBlue);
+}
+.switchContainer{
+  padding-top: 8px;
 }
 
 /*Responsive Navbar*/

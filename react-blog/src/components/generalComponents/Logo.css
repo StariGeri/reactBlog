@@ -12,6 +12,9 @@
 .logoLink {
   text-decoration: none;
 }
+#dark .logo {
+  color: white;
+}
 
 @media screen and (max-width: 768px) {
   .logo {
