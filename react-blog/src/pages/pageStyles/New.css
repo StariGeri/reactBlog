@@ -12,6 +12,9 @@
   margin: 70px auto;
   font-family: var(--headingFont);
 }
+#dark .newSection h1 {
+  color: white;
+}
 @media screen and (max-width: 768px) {
   .newSection h1 {
     font-size: 30px;

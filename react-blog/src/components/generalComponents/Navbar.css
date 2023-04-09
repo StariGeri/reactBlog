@@ -78,19 +78,19 @@ nav {
   color: white;
 }
 #dark .menuWrapper h2:hover {
-  color: var(--lightBlue);
+  color: var(--myRed);
 }
 .active h2{
   color: var(--darkBlue);
 }
 #dark .active h2{
-  color: var(--lightBlue);
+  color: var(--myRed);
 }
 .active .adminSvg{
   fill: var(--darkBlue);
 }
 #dark .active .adminSvg{
-  fill: var(--lightBlue);
+  fill: var(--myRed);
 }
 .menuWrapper h2:hover {
   color: var(--darkBlue);
@@ -116,7 +116,7 @@ nav {
   color: var(--darkBlue);
 }
 #dark .menuWrapper .adminSvg:hover {
-  color: var(--lightBlue);
+  color: var(--myRed);
 }
 .switchContainer{
   padding-top: 8px;

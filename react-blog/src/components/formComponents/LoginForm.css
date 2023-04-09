@@ -11,14 +11,23 @@
     border-radius: 10px;
     transition: all 0.3s ease;
 }
+#dark .loginForm{
+    background-color: var(--darkerBlue);
+}
 .loginForm:hover{
     box-shadow: 0 0 10px 0 rgba(0, 119, 182, 0.5);
+}
+#dark .loginForm:hover{
+    box-shadow: 0 0 10px 0 rgba(206, 231, 246, 0.3)
 }
 .loginForm h2{
     font-size: 24px;
     font-family: var(--headingFont);
     font-weight: 500;
     color: black;
+}
+#dark .loginForm h2{
+    color: white;
 }
 .loginInputWrapper{
     display: flex;
@@ -37,6 +46,9 @@
     margin: 20px 0 10px 0;
     align-self: flex-start;
 }
+#dark .loginForm label{
+    color: white;
+}
 .loginForm input{
     height: 40px;
     width: 100%;
@@ -50,6 +62,11 @@
     color: var(--darkBlue);
     outline: none;
     transition: all 0.3s ease;
+}
+
+#dark .loginForm input{
+    background-color: var(--lightBlue);
+    color: var(--dark);
 }
 .loginButtonWrapper{
     display: flex;

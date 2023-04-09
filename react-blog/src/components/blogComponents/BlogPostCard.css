@@ -14,6 +14,9 @@
   position: relative;
   transition: all 0.3s ease-in-out;
 }
+#dark .card {
+  border-left: 2px solid var(--lightBlue);
+}
 .cardContent {
   display: flex;
   flex-direction: column;
@@ -28,13 +31,22 @@
   color: black;
   transition: all 0.4s ease-in-out;
 }
+#dark .blogTitle {
+  color: white;
+}
 .card:hover .blogTitle {
   color: var(--darkBlue);
+}
+#dark .card:hover .blogTitle {
+  color: var(--lightBlue);
 }
 .blogDate {
   font-family: var(--generalFont);
   font-size: 14px;
   color: black;
+}
+#dark .blogDate {
+  color: white;
 }
 .adminButtons{
   display: flex;

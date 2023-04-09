@@ -7,15 +7,26 @@
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
+
 .filled {
   color: black;
   background-color: var(--lightBlue);
   border: 1px solid var(--lightBlue);
 }
+#dark .filled {
+  color: white;
+  background-color: var(--darkBlue);
+  border: 1px solid var(--darkBlue);
+}
 .filled:hover {
   color: white;
   background-color: var(--darkBlue);
   border: 1px solid var(--darkBlue);
+}
+#dark .filled:hover {
+  color: white;
+  background-color: var(--darkerBlue);
+  border: 1px solid var(--darkerBlue);
 }
 .outlined {
   color: var(--darkBlue);
@@ -27,15 +38,35 @@
   background-color: var(--darkBlue);
   border: 1px solid var(--darkBlue);
 }
+#dark .outlined {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+#dark .outlined:hover {
+  color: white;
+  background-color: var(--darkBlue);
+  border: 1px solid var(--darkBlue);
+}
 .reverse {
   color: white;
   background-color: var(--darkBlue);
   border: 1px solid var(--darkBlue);
 }
+#dark .reverse {
+  color: white;
+  background-color: var(--dark);
+  border: 1px solid var(--dark);
+}
 .reverse:hover {
   color: white;
   background-color: var(--darkerBlue);
   border: 1px solid var(--darkerBlue);
+}
+#dark .reverse:hover {
+  color: white;
+  background-color: var(--darkBlue);
+  border: 1px solid var(--darkBlue);
 }
 .delete {
   color: var(--myRed);
@@ -47,7 +78,7 @@
   background-color: var(--myRed);
   border: 1px solid var(--myRed);
 }
-.addNew{
+.addNew {
   color: white;
   background-color: var(--myGreen);
   border: 1px solid var(--myGreen);
@@ -56,6 +87,16 @@
   color: white;
   background-color: green;
   border: 1px solid green;
+}
+#dark .addNew {
+  color: white;
+  background-color: green;
+  border: 1px solid green;
+}
+#dark .addNew:hover {
+  color: black;
+  background-color: var(--myGreen);
+  border: 1px solid var(--myGreen);
 }
 @media screen and (max-width: 500px) {
   .basic {

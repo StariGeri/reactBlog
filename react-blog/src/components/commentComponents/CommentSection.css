@@ -15,12 +15,18 @@
   background-color: var(--lightBlue);
   margin: 20px 0;
 }
+#dark .commentSectionDivider {
+  background-color: var(--darkBlue);
+}
 .commentTitle {
   font-size: 30px;
   font-weight: 600;
   color: black;
   margin: 50px auto;
   font-family: var(--headingFont);
+}
+#dark .commentTitle {
+  color: white;
 }
 .commentTitleWrapper {
   width: 100%;
@@ -32,6 +38,9 @@
   margin: 30px auto 20px auto;
   font-family: var(--headingFont);
   letter-spacing: 1px;
+}
+#dark .commentSubTitle {
+  color: white;
 }
 .commentList {
   width: 100%;

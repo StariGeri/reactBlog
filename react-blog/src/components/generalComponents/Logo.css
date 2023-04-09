@@ -16,7 +16,7 @@
   color: white;
 }
 #dark .logo:hover {
-  color: var(--lightBlue);
+  color: var(--myRed);
 }
 
 @media screen and (max-width: 768px) {

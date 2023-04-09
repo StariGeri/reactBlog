@@ -43,9 +43,18 @@
   background-size: 20px;
   background-position: calc(100% - 2px) center;
 }
+#dark .paginateDropdown {
+  background-color: var(--darkBlue);
+  color: white;
+  background-image: url("/lightDownArrow.svg");
+}
 .paginateDropdown option {
   color: black;
   background-color: var(--lightBlue);
+}
+#dark .paginateDropdown option {
+  color: white;
+  background-color: var(--darkBlue);
 }
 .newButtonContainer {
   display: flex;

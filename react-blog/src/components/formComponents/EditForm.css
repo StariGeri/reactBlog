@@ -20,6 +20,9 @@
     font-size: 20px;
     font-weight: bold;
   }
+  #dark .editForm label {
+    color: white;
+  }
   .editForm input {
     width: 100%;
     height: 40px;
@@ -30,6 +33,11 @@
     margin: 20px 0 40px 0;
     background-color: var(--myGray);
     padding: 20px;
+    outline: none;
+  }
+  #dark .editForm input {
+    background-color: var(--lightBlue);
+    color: var(--dark);
   }
   .editForm textarea {
     width: 100%;
@@ -42,6 +50,11 @@
     resize: none;
     background-color: var(--myGray);
     padding: 20px;
+    outline: none;
+  }
+  #dark .editForm textarea {
+    background-color: var(--lightBlue);
+    color: var(--dark);
   }
   .formButtonContainer {
     display: flex;

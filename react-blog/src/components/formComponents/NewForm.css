@@ -21,6 +21,9 @@
   font-size: 20px;
   font-weight: bold;
 }
+#dark .newForm label {
+  color: white;
+}
 .newForm input {
   width: 100%;
   height: 40px;
@@ -31,6 +34,11 @@
   margin: 20px 0 40px 0;
   background-color: var(--myGray);
   padding: 20px;
+  outline: none;
+}
+#dark .newForm input {
+  background-color: var(--lightBlue);
+  color: var(--dark);
 }
 .newForm textarea {
   width: 100%;
@@ -43,6 +51,11 @@
   resize: none;
   background-color: var(--myGray);
   padding: 20px;
+  outline: none;
+}
+#dark .newForm textarea {
+  background-color: var(--lightBlue);
+  color: var(--dark);
 }
 .formButtonContainer {
   display: flex;

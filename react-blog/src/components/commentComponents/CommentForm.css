@@ -20,6 +20,10 @@
   stroke: none;
   background-color: var(--myGray);
 }
+#dark .commentForm input {
+  background-color: var(--lightBlue);
+  color: var(--dark);
+}
 .commentForm textarea {
   width: 100%;
   max-width: 300px;
@@ -32,18 +36,22 @@
   resize: none;
   background-color: var(--myGray);
 }
+#dark .commentForm textarea {
+  background-color: var(--lightBlue);
+  color: var(--dark);
+}
 ::placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
-  color: black;
+  color: var(--dark);
 }
 ::-moz-placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
-  color: black;
+  color: var(--dark);
 }
 :-ms-input-placeholder {
   font-family: var(--headingFont);
   font-size: 14px;
-  color: black;
+  color: var(--dark);
 }

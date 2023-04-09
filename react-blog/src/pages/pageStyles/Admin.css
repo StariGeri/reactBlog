@@ -11,6 +11,9 @@
   margin: 70px auto 30px auto;
   font-family: var(--headingFont);
 }
+#dark .adminTitle {
+  color: white;
+}
 @media screen and (max-width: 768px) {
   .adminTitle {
     font-size: 30px;
