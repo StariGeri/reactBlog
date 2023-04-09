@@ -1,0 +1,14 @@
+version: "3.4" 
+ 
+services: 
+    stariReactBlog: 
+        image: stariReactBlog 
+        container_name: stariReactBlog 
+        build: 
+            context: . 
+            dockerfile: ./Dockerfile 
+        environment: 
+            NODE_ENV: production 
+        ports: 
+            - 7341:3000 
+        restart: unless-stopped
