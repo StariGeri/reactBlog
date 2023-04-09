@@ -10,5 +10,5 @@ services:
         environment: 
             NODE_ENV: production 
         ports: 
-            - 7341:3000 
+            - 7341:4173 
         restart: unless-stopped
